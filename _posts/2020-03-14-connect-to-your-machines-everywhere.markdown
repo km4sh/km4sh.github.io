@@ -20,9 +20,9 @@ categories: Networks
 
 I have these hosts:
 
-    - GPU Cluster: elijah@10.0.0.10 (in LAB LAN)
-    - Personal Ubuntu: elijah@10.0.0.104 (in LAB LAN)
-    - UCloud Server: root@120.132.2.138 (in WAN)
+    - GPU Cluster: elijah@10.8.92.10 (in LAB LAN)
+    - Personal Ubuntu: elijah@10.8.92.104 (in LAB LAN)
+    - UCloud Server: root@128.128.128.128 (in WAN)
     - Macbook Pro: me@I.DON.T.KNOW (in Happy)
 
 and I wanna use my **Macbook Pro** to connect to the **GPU Cluster** directly.
@@ -62,12 +62,12 @@ and I wanna use my **Macbook Pro** to connect to the **GPU Cluster** directly.
 
 ### Step 1: RSA-key publication
 
-Use `ssh-keygen` on `10.0.0.4`, then copy the RSA public key to `120.132.2.138` using
+Use `ssh-keygen` on `10.8.92.4`, then copy the RSA public key to `128.128.128.128` using
 `ssh-copy-id`. This is to avoid typing password while reconnection.
 
-    elijah@10.0.0.104 > $
+    elijah@10.8.92.104 > $
     ssh-keygen
-    ssh-copy-id root@120.132.2.138
+    ssh-copy-id root@128.128.128.128
 
 In our case you **should NOT type any passphase** in `ssh-keygen`, because you may
 need to type the RSA key passphase while using the key.
@@ -77,14 +77,14 @@ need to type the RSA key passphase while using the key.
 
 ### Step 2 Reverse SSH Tunnel by port forwarding
 
-Then pull a *Port forwarding* from `120.132.2.138` to `10.0.0.4`, for example run this
-command on `10.0.0.104`:
+Then pull a *Port forwarding* from `128.128.128.128` to `10.8.92.4`, for example run this
+command on `10.8.92.104`:
 
-    elijah@10.0.0.104 > $
-    autossh -M 33255 -fCNR 33254:localhost:22 root@120.132.2.138
+    elijah@10.8.92.104 > $
+    autossh -M 33255 -fCNR 3838:localhost:22 root@128.128.128.128
 
 where `autossh` is a very useful tool to keep connection from TIMEOUT exception.
-and `33254:localhost:22 root@120.132.2.138` means let the **remote port(33254)** point
+and `3838:localhost:22 root@128.128.128.128` means let the **remote port(3838)** point
 to the **localhost port(22 default SSH port)**. The option `-M 33255` is used for
 autossh monitoring if the "SSH connection"(actually a port forwarding) is good,
 and if not, autossh will reconnect automatically as its name.
@@ -94,28 +94,28 @@ and if not, autossh will reconnect automatically as its name.
 
 ### Stpe 3 (optional) Open a direct door
 
-Actually now it is possible to connenct the `10.0.0.104` by using command
+Actually now it is possible to connenct the `10.8.92.104` by using command
 
-    root@120.132.2.138 > $
-    ssh -p 33254 elijah@localhost
+    root@128.128.128.128 > $
+    ssh -p 3838 elijah@localhost
 
-on `120.132.2.138`. and the `elijah` above should be the username you wanna log as
-on `10.0.0.104`. Amazing!
+on `128.128.128.128`. and the `elijah` above should be the username you wanna log as
+on `10.8.92.104`. Amazing!
 
-But you still need to SSH to `120.132.2.138` at the beginning on your machine. Why
-not open another port to directly connect to `10.0.0.104` on the jump-server?
+But you still need to SSH to `128.128.128.128` at the beginning on your machine. Why
+not open another port to directly connect to `10.8.92.104` on the jump-server?
 
 Good to know that SSH also allow us to do local port forwarding operation.
 
-    root@120.132.2.138 > $
-    ssh -fCNL *:9209:localhost:33254 localhost
+    root@128.128.128.128 > $
+    ssh -fCNL *:4040:localhost:3838 localhost
 
-This command point `localhost:9209` to `localhost:33254`, that is exactally the same
-as `120.132.2.138:9209` to `localhost:33254`. So we are able to connect to
-`10.0.0.104` directly from our own machine by typing
+This command point `localhost:4040` to `localhost:3838`, that is exactally the same
+as `128.128.128.128:4040` to `localhost:3838`. So we are able to connect to
+`10.8.92.104` directly from our own machine by typing
 
     me@macbook_pro > $
-    ssh -p 9209 elijah@120.132.2.138
+    ssh -p 4040 elijah@128.128.128.128
 
 Amazing, again!
 
@@ -124,10 +124,10 @@ Amazing, again!
 
 ### TODO Stpe 4 (really?) Connect to the GPU Cluster
 
-Because there are so many users still logged in on `10.0.0.10` (GPU Cluster if you
+Because there are so many users still logged in on `10.8.92.10` (GPU Cluster if you
 forgot) right now, the best way to do it is write this down in your `~/.bashrc`
 
-    alias wcid="ssh elijah@10.0.0.10"
+    alias wcid="ssh elijah@10.8.92.10"
 
 booyah! A perfect SSH connection established!
 Enjoy!
