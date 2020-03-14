@@ -3,18 +3,17 @@ layout: post
 title:  "Connect to your Machines Everywhere."
 date:   2020-03-14 20:57:12 +0800
 categories: Networks
-
-
+---
 # Table of Contents
 
-1.  [Reverse SSH Forwarding.](#org62afd15)
-    1.  [Some reference:](#org130fb40)
-        1.  [Reverse SSH command options](#org0f718b0)
-    2.  [Solution](#org6286da6)
-        1.  [Step 1: RSA-key publication](#org7ccf9e8)
-        2.  [Step 2 Reverse SSH Tunnel by port forwarding](#orgb0ca664)
-        3.  [Stpe 3 (optional) Open a direct door](#orgdef335f)
-        4.  [Stpe 4 (really?) Connect to the GPU Cluster](#orge451427)
+- [Reverse SSH Forwarding.](#org62afd15)
+    - [Some reference:](#org130fb40)
+      - [Reverse SSH command options](#org0f718b0)
+    - [Solution](#org6286da6)
+      - [Step 1: RSA-key publication](#org7ccf9e8)
+      - [Step 2 Reverse SSH Tunnel by port forwarding](#orgb0ca664)
+      - [Stpe 3 (optional) Open a direct door](#orgdef335f)
+      - [Stpe 4 (really?) Connect to the GPU Cluster](#orge451427)
 
 
 <a id="org62afd15"></a>
@@ -65,13 +64,11 @@ and I wanna use my **Macbook Pro** to connect to the **GPU Cluster** directly.
 
 Use `ssh-keygen` on `10.0.0.4`, then copy the RSA public key to `120.132.2.138` using
 `ssh-copy-id`. This is to avoid typing password while reconnection.
-    {% highlight shell %}
 
     elijah@10.0.0.104 > $
     ssh-keygen
     ssh-copy-id root@120.132.2.138
 
-    {% endhighlight %}
 In our case you **should NOT type any passphase** in `ssh-keygen`, because you may
 need to type the RSA key passphase while using the key.
 
