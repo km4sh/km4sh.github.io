@@ -20,6 +20,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install requests
           python -m pip install slugify
+          python -m pip install commonmark
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.2
