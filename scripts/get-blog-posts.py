@@ -18,7 +18,7 @@ client = NotionClient(token_v2=NOTION_TOKEN)
 root_page_id = NOTION_ROOT_PAGE_ID
 
 dest_path = os.path.normpath(os.path.join(
-    os.path.dirname(__file__), '..', 'content', 'blog'))
+    os.path.dirname(__file__), '..', 'content', 'posts'))
 
 markdown_pages = {}
 regex_meta = re.compile(r'^== *(\w+) *:* (.+) *$')
