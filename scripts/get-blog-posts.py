@@ -1,10 +1,7 @@
 from notion.client import NotionClient
-import datetime
 import os
 from slugify import slugify
 import re
-import requests
-import time
 import hashlib
 import shutil
 import sys
