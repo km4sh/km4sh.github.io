@@ -1,4 +1,5 @@
 from notion.client import NotionClient
+from datetime import datetime
 import os
 from slugify import slugify
 import re
@@ -109,15 +110,15 @@ def to_markdown(page_id, ignore):
     slug = slugify(page_title)
     text = ''
     metas = []
+    # Handle Frontmatter
+    isotime = datetime.fromtimestamp(int(page._get_record_data()['last_edited_time']) // 1000).isoformat()
     metas.append('title: {}'.format(page.title))
-    metas.append('time: {}'.format(page._get_record_data()['last_edited_time']).isoformat())
+    metas.append('time: {}'.format(isotime))
     metas.append('template: {}'.format('false'))
     metas.append('slug: {}'.format(slug))
     metas.append('category: {}'.format('All'))
     metas.append('tages: {}'.format(''))
     metas.append('description: {}'.format(slug))
-    # Handle Frontmatter
-    metas.append(f"title: '{page_title}'")
 
     # Download the cover and add it to the frontmatter.
     text, child_metas = process_block(page)
