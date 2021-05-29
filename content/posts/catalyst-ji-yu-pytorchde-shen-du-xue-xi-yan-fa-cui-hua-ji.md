@@ -1,11 +1,13 @@
 ---
 title: Catalyst：基於PyTorch的深度學習研發催化劑
-time: 2021-05-29T22:29:00
-template: false
-slug: catalyst-ji-yu-pytorchde-shen-du-xue-xi-yan-fa-cui-hua-ji
-category: All
-tages: 
-description: catalyst-ji-yu-pytorchde-shen-du-xue-xi-yan-fa-cui-hua-ji
+time: "2021-05-29T22:29:00.121Z"
+template: "post"
+slug: "catalyst-ji-yu-pytorchde-shen-du-xue-xi-yan-fa-cui-hua-ji"
+draft: false
+category: "All"
+tags:
+  - "Blog"
+description: "catalyst-ji-yu-pytorchde-shen-du-xue-xi-yan-fa-cui-hua-ji"
 ---
 ```Shell
 == date: 2020-09-17

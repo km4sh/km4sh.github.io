@@ -114,10 +114,10 @@ def to_markdown(page_id, ignore):
     isotime = datetime.fromtimestamp(int(page._get_record_data()['last_edited_time']) // 1000).isoformat()
     isotime = isotime + '.121Z'
     metas.append('title: {}'.format(page.title))
-    metas.append('time: "{}"'.format(isotime))
+    metas.append('date: "{}"'.format(isotime))
     metas.append('template: "{}"'.format('post'))
-    metas.append('slug: "{}"'.format(slug))
     metas.append('draft: {}'.format('false'))
+    metas.append('slug: "{}"'.format(slug))
     metas.append('category: "{}"'.format('All'))
     metas.append('tags:\n  - "{}"'.format('Blog'))
     metas.append('description: "{}"'.format(slug))
