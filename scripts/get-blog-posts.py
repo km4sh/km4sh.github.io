@@ -41,7 +41,6 @@ def process_block(block, text_prefix=''):
     was_bulleted_list = False
     text = ''
     metas = []
-
     for content in block.children:
         # Close the bulleted list.
         if was_bulleted_list and content.type != 'bulleted_list':
@@ -58,7 +57,7 @@ def process_block(block, text_prefix=''):
             if len(content.title.split('\n')) == 2:
                 for item in content.title.split('\n'):
                     matchMeta = regex_meta.match(item)
-                    if matchMeta:
+                    if False:
                         key = matchMeta.group(1)
                         value = matchMeta.group(2)
                         metas.append(f"{key}: '{value}'")
@@ -110,7 +109,13 @@ def to_markdown(page_id, ignore):
     slug = slugify(page_title)
     text = ''
     metas = []
-
+    metas.append('title: {}'.format(page.title))
+    metas.append('time: {}'.format(page._get_record_data()['last_edited_time']).isoformat())
+    metas.append('template: {}'.format('false'))
+    metas.append('slug: {}'.format(slug))
+    metas.append('category: {}'.format('All'))
+    metas.append('tages: {}'.format(''))
+    metas.append('description: {}'.format(slug))
     # Handle Frontmatter
     metas.append(f"title: '{page_title}'")
 
