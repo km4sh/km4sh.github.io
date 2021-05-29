@@ -112,6 +112,7 @@ def to_markdown(page_id, ignore):
     metas = []
     # Handle Frontmatter
     isotime = datetime.fromtimestamp(int(page._get_record_data()['last_edited_time']) // 1000).isoformat()
+    isotime = isotime + '.121Z'
     metas.append('title: {}'.format(page.title))
     metas.append('time: {}'.format(isotime))
     metas.append('template: {}'.format('post'))
