@@ -137,9 +137,11 @@ def to_markdown(page_id, ignore):
 
 
 if __name__ == "__main__":
-    print(f'-> Cleaning the "{dest_path}" folder')
-    shutil.rmtree(dest_path)
-    os.mkdir(dest_path)
+    print(f'-> Cleaning the" {dest_path}" folder')
+    try:
+        shutil.rmtree(dest_path)
+    except FileNotFoundError:
+        os.mkdir(dest_path)
 
     to_markdown(root_page_id, ignore=ignore_root)
 
