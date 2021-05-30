@@ -63,7 +63,7 @@ def process_block(block, text_prefix=''):
                         key = matchMeta.group(1)
                         value = matchMeta.group(2)
                         if key == 'tags':
-                            metas.append("{}: \n  -{}".format(
+                            metas.append("{}: \n  - {}".format(
                                 key,
                                 '\n  -'.join(value.split(','))
                             ))
