@@ -69,9 +69,9 @@ def process_block(block, text_prefix=''):
                             ))
                         else:
                             metas.append(f"{key}: {value}")
-                    else:
-                        text = text + f'```{content.language}\n{content.title}\n```\n\n'
-                        break
+            else:
+                text = text + f'```{content.language}\n{content.title}\n```\n\n'
+                break
         elif content.type == 'image':
             path = content.source.replace('/signed/', '/image/')
             path = path + f"table=block&id={content.id}"
