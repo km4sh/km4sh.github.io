@@ -42,6 +42,7 @@ def process_block(block, text_prefix=''):
     was_bulleted_list = False
     text = ''
     metas = []
+
     for content in block.children:
         # Close the bulleted list.
         if was_bulleted_list and content.type != 'bulleted_list':
@@ -55,13 +56,13 @@ def process_block(block, text_prefix=''):
         elif content.type == 'sub_sub_header':
             text = text + f'### {content.title}\n\n'
         elif content.type == 'code':
-            if len(content.title.split('\n')) == 2:
-                for item in content.title.split('\n'):
+            if content.title[:10] == '[METADATA]':
+                for item in content.title.split('\n')[1:]:
                     matchMeta = regex_meta.match(item)
-                    if False:
+                    if matchMeta:
                         key = matchMeta.group(1)
                         value = matchMeta.group(2)
-                        metas.append(f"{key}: '{value}'")
+                        metas.append(f"{key}: {value}")
                     else:
                         text = text + f'```{content.language}\n{content.title}\n```\n\n'
                         break
@@ -69,8 +70,6 @@ def process_block(block, text_prefix=''):
             path = content.source.replace('/signed/', '/image/')
             path = path + f"table=block&id={content.id}"
             path = path + f"&spaceId={content.parent.space_info['spaceId']}"
-            # path = path + f"&width=1630"
-            # path = path + f"&userId=96965232-968b-4737-8b73-9ed0380e2be8&cache=v2"
             image_name = download_file(path, dest_path)
             text = text + text_prefix + f'![{image_name}]({image_name})\n\n'
         elif content.type == 'bulleted_list':
@@ -84,7 +83,7 @@ def process_block(block, text_prefix=''):
             text = text + f'`video: {content.source}`\n\n'
         elif content.type == 'page':
             subpage_slug = to_markdown(content.id, ignore=False)
-            text = text + f'[{content.title}](/blog/{subpage_slug})\n\n'
+            text = text + f'[{content.title}](/posts/{subpage_slug})\n\n'
         elif content.type == 'callout':
             text = text + text_prefix + f'{content.title}\n\n'
         elif content.type == 'bookmark':
@@ -107,20 +106,15 @@ def process_block(block, text_prefix=''):
 def to_markdown(page_id, ignore):
     page = client.get_block(page_id)
     page_title = page.title
-    slug = slugify(page_title)
+    slug = page_id
     text = ''
     metas = []
     # Handle Frontmatter
     isotime = datetime.fromtimestamp(int(page._get_record_data()['last_edited_time']) // 1000).isoformat()
     isotime = isotime + '.121Z'
-    metas.append('title: {}'.format(page.title))
+    metas.append('title: "{}"'.format(page.title))
     metas.append('date: "{}"'.format(isotime))
-    metas.append('template: "{}"'.format('post'))
-    metas.append('draft: {}'.format('false'))
     metas.append('slug: "{}"'.format(slug))
-    metas.append('category: "{}"'.format('All'))
-    metas.append('tags:\n  - "{}"'.format('Blog'))
-    metas.append('description: "{}"'.format(slug))
 
     # Download the cover and add it to the frontmatter.
     text, child_metas = process_block(page)
