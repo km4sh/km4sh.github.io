@@ -65,7 +65,7 @@ def process_block(block, text_prefix=''):
                         if key == 'tags':
                             metas.append("{}: \n  - {}".format(
                                 key,
-                                '\n  -'.join(value.split(','))
+                                '\n  - '.join(value.split(','))
                             ))
                         else:
                             metas.append(f"{key}: {value}")
