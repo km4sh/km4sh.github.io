@@ -30,21 +30,7 @@ module.exports = {
     bio: '† 少女祈禱中 †',
     contacts: {
       email: 'km4sh.c137@gmail.com',
-      facebook: '',
-      telegram: '',
-      twitter: '',
-      github: '',
-      rss: '',
-      vkontakte: '',
-      linkedin: '',
-      instagram: '#',
-      line: '',
-      gitlab: '',
-      weibo: '',
-      codepen: '',
-      youtube: '',
-      soundcloud: '',
-      medium: '',
+      github: 'km4sh',
     }
   }
 };
