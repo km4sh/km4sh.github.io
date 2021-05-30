@@ -22,7 +22,6 @@ dest_path = os.path.normpath(os.path.join(
     os.path.dirname(__file__), '..', 'content', 'posts'))
 
 markdown_pages = {}
-regex_meta = re.compile(r'^== *(\w+) *:* (.+) *$')
 ignore_root = True
 
 
@@ -57,12 +56,19 @@ def process_block(block, text_prefix=''):
             text = text + f'### {content.title}\n\n'
         elif content.type == 'code':
             if content.title[:10] == '[METADATA]':
+                regex_meta = re.compile(r'^ *(\w+) *:* (.+) *$')
                 for item in content.title.split('\n')[1:]:
                     matchMeta = regex_meta.match(item)
                     if matchMeta:
                         key = matchMeta.group(1)
                         value = matchMeta.group(2)
-                        metas.append(f"{key}: {value}")
+                        if key == 'tags':
+                            metas.append("{}: \n  -{}".format(
+                                key,
+                                '\n  -'.join(value.split(','))
+                            ))
+                        else:
+                            metas.append(f"{key}: {value}")
                     else:
                         text = text + f'```{content.language}\n{content.title}\n```\n\n'
                         break
