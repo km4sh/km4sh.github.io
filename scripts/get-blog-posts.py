@@ -33,6 +33,7 @@ def download_file(file_url, destination_folder):
     file_name = '{}.{}'.format(hashlib.sha1(r.content).hexdigest(), ext)
     file_path = os.path.join(destination_folder, file_name)
     # open the file to write as binary - replace 'wb' with 'w' for text files
+    os.makedirs(destination_folder, exist_ok=True)
     with open(file_path, 'wb') as f:
         f.write(r.content)
     return file_name
@@ -71,7 +72,6 @@ def process_block(block, text_prefix=''):
                             metas.append(f"{key}: {value}")
             else:
                 text = text + f'```{content.language}\n{content.title}\n```\n\n'
-                break
         elif content.type == 'image':
             path = content.source.replace('/signed/', '/image/')
             path = path + f"table=block&id={content.id}"
@@ -88,7 +88,7 @@ def process_block(block, text_prefix=''):
         elif content.type == 'video':
             text = text + f'`video: {content.source}`\n\n'
         elif content.type == 'page':
-            subpage_slug = to_markdown(content.id, ignore=False)
+            subpage_slug = fetch_notion_page(content.id, ignore=False)
             text = text + f'[{content.title}](/posts/{subpage_slug})\n\n'
         elif content.type == 'callout':
             text = text + text_prefix + f'{content.title}\n\n'
@@ -109,9 +109,10 @@ def process_block(block, text_prefix=''):
     return text, metas
 
 
-def to_markdown(page_id, ignore):
+def fetch_notion_page(page_id, ignore):
     page = client.get_block(page_id)
     page_title = page.title
+    print("-> Now fetching:", page_title)
     slug = page_id
     text = ''
     metas = []
@@ -123,6 +124,7 @@ def to_markdown(page_id, ignore):
     metas.append('slug: "{}"'.format(slug))
 
     # Download the cover and add it to the frontmatter.
+
     text, child_metas = process_block(page)
 
     metas = metas + child_metas
@@ -138,12 +140,14 @@ def to_markdown(page_id, ignore):
 
 if __name__ == "__main__":
     print(f'-> Cleaning the" {dest_path}" folder')
+
     try:
         shutil.rmtree(dest_path)
+        os.mkdir(dest_path)
     except FileNotFoundError:
         os.mkdir(dest_path)
 
-    to_markdown(root_page_id, ignore=ignore_root)
+    fetch_notion_page(root_page_id, ignore=ignore_root)
 
     for slug, markdown in markdown_pages.items():
         file_name = slug + '.md'
