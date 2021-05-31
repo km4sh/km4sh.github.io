@@ -40,6 +40,8 @@ def download_file(file_url, destination_folder):
 
 def process_block(block, text_prefix=''):
     was_bulleted_list = False
+    was_numbered_list = False
+    count = 0
     text = ''
     metas = []
 
@@ -48,6 +50,11 @@ def process_block(block, text_prefix=''):
         if was_bulleted_list and content.type != 'bulleted_list':
             text = text + '\n'
             was_bulleted_list = False
+
+        if was_numbered_list and content.type != 'numbered_list':
+            text = text + '\n'
+            was_numbered_list = False
+            count = 0
 
         if content.type == 'header':
             text = text + f'# {content.title}\n\n'
@@ -81,6 +88,10 @@ def process_block(block, text_prefix=''):
         elif content.type == 'bulleted_list':
             text = text + text_prefix + f'* {content.title}\n'
             was_bulleted_list = True
+        elif content.type == 'numbered_list':
+            count += 1
+            text = text + text_prefix + f'{count}. {content.title}\n'
+            was_numbered_list = True
         elif content.type == 'divider':
             text = text + '---\n'
         elif content.type == 'text':
