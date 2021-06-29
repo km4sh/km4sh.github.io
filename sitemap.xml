@@ -7,6 +7,7 @@
 <url> <loc>https://lumen.netlify.com/posts/4031fd98-7051-4445-83b1-2198d453891b</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lumen.netlify.com/posts/543074fa-a990-45bf-bc64-371f03b12a76</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lumen.netlify.com/posts/61941d3c-0be0-4cc2-9e9c-fa0d784d8a29</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lumen.netlify.com/posts/f077d3f6-b857-4125-ba49-0b3c3428078f</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lumen.netlify.com/posts/facf277e-1429-41fd-a168-c684eb945e07</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lumen.netlify.com/tag/automatic</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lumen.netlify.com/tag/catalyst</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -18,4 +19,5 @@
 <url> <loc>https://lumen.netlify.com/category/deployment</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lumen.netlify.com/category/translation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lumen.netlify.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lumen.netlify.com/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
