@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by er1yaaruma]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Aug 2021 00:15:39 GMT</lastBuildDate><item><title><![CDATA[如何下載AudioSet數據集的音頻文件]]></title><description><![CDATA[如何利用Python下載龐大的AudioSet數據集，並且進行數據驗證於後處理。]]></description><link>https://lumen.netlify.com/posts/550ee3f0-7653-4036-9568-b221dcc2e733</link><guid isPermaLink="false">https://lumen.netlify.com/posts/550ee3f0-7653-4036-9568-b221dcc2e733</guid><pubDate>Tue, 06 Jul 2021 14:49:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;寫在前面&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%AF%AB%E5%9C%A8%E5%89%8D%E9%9D%A2&quot; aria-label=&quot;寫在前面 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;寫在前面&lt;/h1&gt;
-&lt;h2 id=&quot;下載audioset的幾個問題&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%8B%E8%BC%89audioset%E7%9A%84%E5%B9%BE%E5%80%8B%E5%95%8F%E9%A1%8C&quot; aria-label=&quot;下載audioset的幾個問題 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;下載AudioSet的幾個問題&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;來自YouTube的問題&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;訪問次數限制&lt;/li&gt;
-&lt;li&gt;視頻下架&lt;/li&gt;
-&lt;li&gt;視頻地區限制&lt;/li&gt;
-&lt;li&gt;視頻年齡限制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;來自AudioSet的問題&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;數據量較大&lt;/li&gt;
-&lt;li&gt;10s時長問題&lt;/li&gt;
-&lt;li&gt;音頻格式、通道數、採樣率以及採樣位數&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by er1yaaruma]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Aug 2021 13:55:28 GMT</lastBuildDate><item><title><![CDATA[如何下載AudioSet數據集的音頻文件]]></title><description><![CDATA[如何利用Python下載龐大的AudioSet數據集，並且進行數據驗證於後處理。]]></description><link>https://lumen.netlify.com/posts/550ee3f0-7653-4036-9568-b221dcc2e733</link><guid isPermaLink="false">https://lumen.netlify.com/posts/550ee3f0-7653-4036-9568-b221dcc2e733</guid><pubDate>Thu, 12 Aug 2021 13:45:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;寫在前面&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%AF%AB%E5%9C%A8%E5%89%8D%E9%9D%A2&quot; aria-label=&quot;寫在前面 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;寫在前面&lt;/h1&gt;
 &lt;h2 id=&quot;看完這篇文章（出於學術目的，僅對下載youtube的技術比較好奇從來不想做別的違反youtube用戶協議事情的你）能收穫什麼&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%9C%8B%E5%AE%8C%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E5%87%BA%E6%96%BC%E5%AD%B8%E8%A1%93%E7%9B%AE%E7%9A%84%EF%BC%8C%E5%83%85%E5%B0%8D%E4%B8%8B%E8%BC%89youtube%E7%9A%84%E6%8A%80%E8%A1%93%E6%AF%94%E8%BC%83%E5%A5%BD%E5%A5%87%E5%BE%9E%E4%BE%86%E4%B8%8D%E6%83%B3%E5%81%9A%E5%88%A5%E7%9A%84%E9%81%95%E5%8F%8Dyoutube%E7%94%A8%E6%88%B6%E5%8D%94%E8%AD%B0%E4%BA%8B%E6%83%85%E7%9A%84%E4%BD%A0%EF%BC%89%E8%83%BD%E6%94%B6%E7%A9%AB%E4%BB%80%E9%BA%BC&quot; aria-label=&quot;看完這篇文章（出於學術目的，僅對下載youtube的技術比較好奇從來不想做別的違反youtube用戶協議事情的你）能收穫什麼 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;看完這篇文章（出於學術目的，僅對下載YouTube的技術比較好奇從來不想做別的違反YouTube用戶協議事情的你）能收穫什麼&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -27,7 +7,7 @@
 &lt;li&gt;youtube-dl的使用方法&lt;/li&gt;
 &lt;li&gt;利用FFmpeg進行轉碼的方法&lt;/li&gt;
 &lt;li&gt;利用sox剪輯你喜歡的音頻的方法&lt;/li&gt;
-&lt;li&gt;如何利用Numpy編輯音頻的方法&lt;/li&gt;
+&lt;li&gt;利用Numpy編輯音頻的方法&lt;/li&gt;
 &lt;li&gt;建立Python和Shell的合作友誼的方法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -54,6 +34,45 @@ July &lt;span class=&quot;token number&quot;&gt;06&lt;/span&gt;&lt;span class=&q
 July &lt;span class=&quot;token number&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt; @&lt;span class=&quot;token number&quot;&gt;35396&lt;/span&gt; INFO     Checking&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 	precision&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;	&lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;bit
 July &lt;span class=&quot;token number&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt; @&lt;span class=&quot;token number&quot;&gt;35396&lt;/span&gt; INFO     Checking&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 	duration&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;	&lt;span class=&quot;token number&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10.00&lt;/span&gt;
 July &lt;span class=&quot;token number&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt; @&lt;span class=&quot;token number&quot;&gt;35396&lt;/span&gt; INFO     Finished&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 	mP0bdHdXLyo_1000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;先來說說如何下載audioset&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%88%E4%BE%86%E8%AA%AA%E8%AA%AA%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BC%89audioset&quot; aria-label=&quot;先來說說如何下載audioset permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;先來說說如何下載AudioSet&lt;/h2&gt;
+&lt;p&gt;包括Google釋放的AudioSet數據集的tsv文檔在內的Github Repo可以訪問：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/km4sh/fetch-audioset&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;GitHub - km4sh/fetch-audioset&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這裏包括了所需的所有代碼。&lt;/p&gt;
+&lt;p&gt;下載AudioSet主要用的是下載神器&lt;code class=&quot;language-text&quot;&gt;youtube-dl&lt;/code&gt;來實現的。最核心的代碼在我Github的Repo當中，可以&lt;a href=&quot;https://github.com/km4sh/fetch-audioset/blob/development/scripts/download_audioset.py&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;點擊這裏&lt;/a&gt;直達。由於接口原因，貌似沒有可以直接下載音頻的方式，所以需要先下載視頻，再提取音頻。所以主要流程如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;split_samplename()&lt;/code&gt; 將輸入參數處理爲視頻ID &lt;code class=&quot;language-text&quot;&gt;ytid&lt;/code&gt; 和開始時間 &lt;code class=&quot;language-text&quot;&gt;start&lt;/code&gt; ；&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;download_video()&lt;/code&gt; 利用ytid將整段視頻下載下來；&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;convert_to_audio()&lt;/code&gt; 利用FFmpeg將視頻中的音頻提取出來，順便完成通道壓縮（僅單通道）、採樣率調整（統一44100Hz）以及格式轉換（WAV）等任務。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;trim_audio()&lt;/code&gt; 利用sox工具進行音頻剪切。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;這裏需要說明的是，雖然FFmpeg也可以一同完成剪切任務，單我在之前的下載當中，發現一些利用FFmpeg剪切後的文件長度並不是嚴格的&lt;code class=&quot;language-text&quot;&gt;SampleRate * Duration&lt;/code&gt;個樣點。後來發現部分AudioSet的樣本可能不足十秒，原因是原視頻就不足十秒。不過我也不確定FFmpeg剪切是完全魯棒的，所以我用了更保險的sox工具來進行剪切。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;padding_zeros()&lt;/code&gt; 如上一步的說明，如果有一些樣本不足十秒，則補零到十秒。這一步可以根據自己的需求選用。&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;checking()&lt;/code&gt; 檢查當前文件是否符合要求，主要檢查通道數、採樣率、採樣深度、採樣時間、總樣點數。也是利用sox來獲取的文檔信息，確保準確可讀。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;對於下載當中由於網絡等原因出現下載失敗的情況，我們可以用&lt;a href=&quot;https://github.com/km4sh/fetch-audioset/blob/development/scripts/clean.py&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;clean.py&lt;/code&gt;&lt;/a&gt;來清理一下臨時文件，以及不符合我們設定格式的文件。&lt;/p&gt;
+&lt;h2 id=&quot;下載audioset的幾個問題&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%8B%E8%BC%89audioset%E7%9A%84%E5%B9%BE%E5%80%8B%E5%95%8F%E9%A1%8C&quot; aria-label=&quot;下載audioset的幾個問題 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;下載AudioSet的幾個問題&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;來自YouTube的問題&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;訪問次數限制&lt;/li&gt;
+&lt;li&gt;視頻下架&lt;/li&gt;
+&lt;li&gt;視頻地區限制&lt;/li&gt;
+&lt;li&gt;視頻年齡限制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;來自AudioSet的問題&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;數據量較大&lt;/li&gt;
+&lt;li&gt;10s時長問題&lt;/li&gt;
+&lt;li&gt;音頻格式、通道數、採樣率以及採樣位數&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;解決方案&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%A1%88&quot; aria-label=&quot;解決方案 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;解決方案&lt;/h1&gt;
@@ -362,109 +381,7 @@ launchctl load &lt;span class=&quot;token variable&quot;&gt;$SERVICE_NAME&lt;/sp
 launchctl unload &lt;span class=&quot;token variable&quot;&gt;$SERVICE_NAME&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;# 查看狀態指令&lt;/span&gt;
-launchctl list &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$SERVICE_NAME&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Forwarding the Lab Power：在任意位置鏈接你的算力]]></title><description><![CDATA[這篇文章是我疫情期間在加爲了鏈接實驗室的算力而做的嘗試，當時主要利用的ssh的端口轉發功能。現在實現同樣功能我用的是Frp，但是SSH的端口轉發支持廣泛、配置容易、而且兼容性也更好，依然處在不可替代的地位。將當時採用的方法記錄在這裏。]]></description><link>https://lumen.netlify.com/posts/facf277e-1429-41fd-a168-c684eb945e07</link><guid isPermaLink="false">https://lumen.netlify.com/posts/facf277e-1429-41fd-a168-c684eb945e07</guid><pubDate>Mon, 31 May 2021 11:14:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;狀況假設&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%8B%80%E6%B3%81%E5%81%87%E8%A8%AD&quot; aria-label=&quot;狀況假設 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;狀況假設&lt;/h1&gt;
-&lt;p&gt;假設我們有如下這些設備，我用&lt;code class=&quot;language-text&quot;&gt;&amp;lt;user&amp;gt;@&amp;lt;ip&amp;gt;&lt;/code&gt;來表示對應用戶名和其主要網卡的IP：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;GPU算力集羣，叫&lt;code class=&quot;language-text&quot;&gt;gpu_cluster&lt;/code&gt;：&lt;code class=&quot;language-text&quot;&gt;&amp;lt;gpu_cluster&amp;gt;@&amp;lt;gpu_server_ip&amp;gt;&lt;/code&gt;
-（位置：實驗室的局域網內，不可鏈接互聯網）&lt;/li&gt;
-&lt;li&gt;實驗室PC，叫&lt;code class=&quot;language-text&quot;&gt;&amp;lt;lab_pc&amp;gt;&lt;/code&gt;: &lt;code class=&quot;language-text&quot;&gt;&amp;lt;lab_pc&amp;gt;@&amp;lt;lab_pc_ip&amp;gt;&lt;/code&gt;
-（位置：實驗室的局域網內，可以鏈接互聯網）&lt;/li&gt;
-&lt;li&gt;終端機，叫&lt;code class=&quot;language-text&quot;&gt;mac&lt;/code&gt;：&lt;code class=&quot;language-text&quot;&gt;&amp;lt;my_mac&amp;gt;@&amp;lt;mac_ip&amp;gt;&lt;/code&gt; &lt;em&gt;（是你要執行登錄用的機器）&lt;/em&gt;
-（位置：你公司/家裏/咖啡館的某個網絡之中，可能沒有公網IP，不過無所謂啦。）&lt;/li&gt;
-&lt;li&gt;互聯網雲服務器，叫&lt;code class=&quot;language-text&quot;&gt;cloud_server&lt;/code&gt;：&lt;code class=&quot;language-text&quot;&gt;&amp;lt;cloud_server&amp;gt;@&amp;lt;cloud_server_ip&amp;gt;&lt;/code&gt;
-（位置：互聯網中，不可直接誒訪問實驗室局域網，&lt;strong&gt;❗️️有一個公網獨立IP&lt;/strong&gt;）&lt;/li&gt;
-&lt;li&gt;實驗室PC，叫&lt;code class=&quot;language-text&quot;&gt;lab_pc&lt;/code&gt;：&lt;code class=&quot;language-text&quot;&gt;&amp;lt;lab_pc&amp;gt;@&amp;lt;lab_pc_ip&amp;gt;&lt;/code&gt;  &lt;em&gt;（也就是SSH跳板機）&lt;/em&gt;
-（位置：實驗室局域網內，可鏈接互聯網）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;那這個時候，&lt;strong&gt;我突然想用我的終端機在咖啡館訪問到實驗室的GPU算力集羣&lt;/strong&gt;。由於GPU算力集羣不能鏈接公網，所以我們可能直覺上就會說，通過我在實驗室的工作機來訪問GPU算力集羣。但是你在咖啡館也&lt;code class=&quot;language-text&quot;&gt;ping&lt;/code&gt;不到你在實驗室的PC機。這時有公網獨立IP的一個服務器就非常重要，因爲你的便攜機Mac和實驗室的PC在公網都沒有屬於自己的IP，但他們都有鏈接上互聯網。如果有一個他們都能直接訪問到的IP，就可以通過這個中轉站進行通訊。&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c8fa83b18c4803cf7dfeb32a8d5e453b/d10dd/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.833333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACD0lEQVQoz3VTXWvTYBTO//DSv+CNP8ALf4BX3nvlneCNguCFoFfC7gaiiB+IsqFzyGQOh23HWJexdq1tk0rTZVnTNEmTpknz+Xjed03NCh445OXlnOd9nuecCKDIsgzFb5qmiKMIQeDD9aZwKMMwRER3juPQfYA4jlGMvFdYBouo8KyvoFL7jUcbB7jxfAMr20cIPRfGaIQ4SagmgTuZwHVdqKq6AGcYHJAxYjF1xpA6HShdGeu7+7jzZhe3Vr/jZakBc6jjTNMgd9rwbJPXM9BmswnTNLkCzrBI+0e1jqHjsae45OpxHeVaCwe1xqKhp1t48WUbQZxekuz7Pk9BUfoYDTT8bCq4+vAdvtZ6jDxMy8aMvMriCBPm2+wC8NnWEa4/XcfxqYHI92DZNjzP474yf4WBPoSln+OzKOHK/VcoSdrFi8GMS4rIs6Lx9z6WcXNlE6/LDfS6EiRJppQgiiJ0Xf8n2ScJa1s7SOZ+shElBBbTpENKZCkcP8Td979we/UbHm8ezh8Bt4OxZLPgQ0nmLFSarmEYC0YMunVu4Y9uY0oNMcl3xzZ2SnsY0yoFPq0UTZrJvbQ2PPn+Zeh2u5ApbWMIUe7j2pNPeLBWQTLzyVcLp7QmCQFHxCofVNESYXkx+S5SoaoN8KFSx9v9NtqaiRmx8YnJciwI5QyX/xTGMo/Dkxb2quJ/AYp9+fkvtRw6blWOKiQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/c8fa83b18c4803cf7dfeb32a8d5e453b/8ac56/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.webp 240w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/d3be9/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.webp 480w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/e46b2/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.webp 960w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/f992d/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.webp 1440w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/61421/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.webp 1749w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/c8fa83b18c4803cf7dfeb32a8d5e453b/8ff5a/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png 240w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/e85cb/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png 480w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/d9199/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png 960w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/07a9c/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png 1440w,
-/static/c8fa83b18c4803cf7dfeb32a8d5e453b/d10dd/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png 1749w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/c8fa83b18c4803cf7dfeb32a8d5e453b/d9199/8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png&quot;
-            alt=&quot;8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png&quot;
-            title=&quot;8d251cc1ddff6d80cc3f65e814b91b8e1a232dbd.png&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;可是，如何實現呢？&lt;/p&gt;
-&lt;h1 id=&quot;透過安全外殼協議ssh的端口轉發&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%80%8F%E9%81%8E%E5%AE%89%E5%85%A8%E5%A4%96%E6%AE%BC%E5%8D%94%E8%AD%B0ssh%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%BD%89%E7%99%BC&quot; aria-label=&quot;透過安全外殼協議ssh的端口轉發 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;透過安全外殼協議SSH的端口轉發&lt;/h1&gt;
-&lt;p&gt;SSH是通常我們用來登錄位於網絡當中的某個機器的外殼所用的協議。最常用的方法大概是這樣：&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; -p &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;port&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;user&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;@&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ip&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# port is 22 by default&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;這就是最簡單的正向鏈接，參數&lt;code class=&quot;language-text&quot;&gt;-p&lt;/code&gt;告訴工具要透過某個端口鏈接，默認是&lt;code class=&quot;language-text&quot;&gt;22&lt;/code&gt;號端口。那麼除了-p參數，我再列舉幾個手冊中的參數說明在這裏。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-R&lt;/code&gt; ：將遠端指定的端口&lt;strong&gt;轉發至本機&lt;/strong&gt;的某一個端口
-&lt;em&gt;Specifies that connections to the given TCP port or Unix socket on the remote (server) host are&lt;/em&gt; &lt;strong&gt;&lt;em&gt;to be forwarded to&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;the&lt;/em&gt; &lt;strong&gt;&lt;em&gt;local&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;side.&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-L&lt;/code&gt;：將本地指定的端口&lt;strong&gt;轉發至遠端&lt;/strong&gt;的某一個端口
-&lt;em&gt;Specifies that connections to the given TCP port or Unix socket on the local (client) host are&lt;/em&gt; &lt;strong&gt;&lt;em&gt;to be forwarded to&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;the given host and port, or Unix socket, on the&lt;/em&gt; &lt;strong&gt;&lt;em&gt;remote&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;side.&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-f&lt;/code&gt;：後臺形式保持鏈接
-&lt;em&gt;Run SSH as daemon progress&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;看到&lt;code class=&quot;language-text&quot;&gt;-R&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;-L&lt;/code&gt;兩個參數，貌似与我们的需求有点关系。他們比較常用的用法大概是這樣&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# -R&lt;/span&gt;
-$ &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; -R -N &lt;span class=&quot;token variable&quot;&gt;$TO_REMOTE_PORT&lt;/span&gt;:localhost:&lt;span class=&quot;token variable&quot;&gt;$FROM_LOCAL_PORT&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$REMOTE_USER&lt;/span&gt;@&lt;span class=&quot;token variable&quot;&gt;$REMOTE_HOST&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# -L&lt;/span&gt;
-$ &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; -L -N *:&lt;span class=&quot;token variable&quot;&gt;$TO_LOCAL_PORT&lt;/span&gt;:localhost:&lt;span class=&quot;token variable&quot;&gt;$FROM_LOCAL_PORT&lt;/span&gt; localhost&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;在本文當中，我們通過&lt;code class=&quot;language-text&quot;&gt;-L&lt;/code&gt;來進行本地和本地端口轉發，通過&lt;code class=&quot;language-text&quot;&gt;-R&lt;/code&gt;來進行機器之間的端口轉發。而另外的参数&lt;code class=&quot;language-text&quot;&gt;-N&lt;/code&gt;则是告訴SSH不要登錄Shell，不執行指令，僅作端口轉發。&lt;/p&gt;
-&lt;h2 id=&quot;僅內網機器和跳板機之間的鏈接&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%83%85%E5%85%A7%E7%B6%B2%E6%A9%9F%E5%99%A8%E5%92%8C%E8%B7%B3%E6%9D%BF%E6%A9%9F%E4%B9%8B%E9%96%93%E7%9A%84%E9%8F%88%E6%8E%A5&quot; aria-label=&quot;僅內網機器和跳板機之間的鏈接 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;僅內網機器和跳板機之間的鏈接&lt;/h2&gt;
-&lt;p&gt;最重要的就是內網機器（內網當中可以訪問網絡的機器）和跳板機（實驗室內可以訪問公網的機器）之間的鏈接，因爲這個鏈接解決了內網和公網之間的隔閡。如果說沒時間完善更多的鏈接，甚至都可以直接建立好這個鏈接之後透過公網服務器登錄到內網機器，再通過內網IP來尋找到你的目標服務器（GPU算力集羣），雖然麻煩了些，但是起碼已經可以連通了。&lt;/p&gt;
-&lt;p&gt;本例當中，我們首先要在內網的機器上進行操作。在內網可以鏈接互聯網的機器&lt;code class=&quot;language-text&quot;&gt;&amp;lt;lab_pc&amp;gt;&lt;/code&gt;上面將自己的&lt;code class=&quot;language-text&quot;&gt;22&lt;/code&gt;端口轉發到服務器上的某個端口 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;port_on_server&amp;gt;&lt;/code&gt; ，然後就可以在服務器上通過這個端口進行訪問了。&lt;/p&gt;
-&lt;p&gt;具體鏈接指令寫在這裏，注意：&lt;code class=&quot;language-text&quot;&gt;&amp;lt;lab_pc&amp;gt; $&lt;/code&gt; 表示你是在 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;lab_pc&amp;gt;&lt;/code&gt;上執行的操作。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;__&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; 
-&lt;span class=&quot;token variable&quot;&gt;$__&lt;/span&gt; autossh -M &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;monitor_port&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; -R -N &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;port_on_server&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;:localhost:22 &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;cloud_server&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;@&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;cloud_server_ip&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;這裏使用了&lt;code class=&quot;language-text&quot;&gt;autossh&lt;/code&gt;，實際上他和&lt;code class=&quot;language-text&quot;&gt;ssh&lt;/code&gt;最大的區別就是多了個監視端口參數&lt;code class=&quot;language-text&quot;&gt;-M &amp;lt;monitor_port&amp;gt;&lt;/code&gt;，利用這個監視端口，我們可以監控鏈接有沒有意外發生broken pipeline。斷線則自動重連，在遠端長時間轉發當中十分實用。&lt;/p&gt;
-&lt;p&gt;現在就可以透過以下指令鏈接內網機器了，然後進入內網之後，你想鏈接算力集羣或者其他機器就都不成問題了。注意這裏的用戶名應該是我們最終到達機器的用戶名。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;**&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;my_mac&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token variable&quot;&gt;$*&lt;/span&gt;* &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; -p &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;port_on_server&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;@&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;cloud_server_ip&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;算力集羣與跳板機之間的鏈接&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%AE%97%E5%8A%9B%E9%9B%86%E7%BE%A3%E8%88%87%E8%B7%B3%E6%9D%BF%E6%A9%9F%E4%B9%8B%E9%96%93%E7%9A%84%E9%8F%88%E6%8E%A5&quot; aria-label=&quot;算力集羣與跳板機之間的鏈接 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;算力集羣與跳板機之間的鏈接&lt;/h2&gt;
-&lt;p&gt;由於本例當中算力集羣並不能訪問互聯網，所以我們要把算力集羣先鏈接至可以訪問公網的內網機器，然後在通過上面講述的方法鏈接到公網服務器上。大多數情況下，局域網內網絡應該都還不錯，不太會出現斷線，所以也可以不使用&lt;code class=&quot;language-text&quot;&gt;autossh&lt;/code&gt;來進行監控鏈接狀況，直接&lt;code class=&quot;language-text&quot;&gt;ssh&lt;/code&gt;鏈接即可。這時登錄要鏈接的GPU算力集羣，我們將他的&lt;code class=&quot;language-text&quot;&gt;22&lt;/code&gt;端口轉發到實驗室PC上來。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;**&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;gpu_cluster&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token variable&quot;&gt;$*&lt;/span&gt;* &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; -R -N &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;port_on_lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;:localhost:22 &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;@&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;lab_pc_ip&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;由於接下來我們需要把&lt;code class=&quot;language-text&quot;&gt;&amp;lt;lab_pc&amp;gt;&lt;/code&gt;上面&lt;code class=&quot;language-text&quot;&gt;&amp;lt;port_on_lab_pc&amp;gt;&lt;/code&gt;的鏈接轉發出去，但這裏要注意一個問題，如果繼續轉發&lt;code class=&quot;language-text&quot;&gt;&amp;lt;port_on_lab_pc&amp;gt;&lt;/code&gt;到公網服務器的話，在我的實踐當中會出莫名失敗，所以這裏更推薦的方法是再加一層本機上的端口轉發（或許是起到了detach之用），這就要用到之前提到的-L參數了。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;**&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token variable&quot;&gt;$*&lt;/span&gt;* &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; -L -N *:&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;reassign_port&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;:localhost:&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;port_on_lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; localhost&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;這時我們再利用上一節當中所用的&lt;code class=&quot;language-text&quot;&gt;autossh -R&lt;/code&gt;將這個本地轉發過端口繼續轉發到公網服務器上面去。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;**&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; 
-&lt;span class=&quot;token variable&quot;&gt;$*&lt;/span&gt;* autossh -M &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;monitor_port&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; -R -N &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;port_on_server&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;:localhost:&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;reassign_port&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;cloud_server&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;@&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;cloud_server_ip&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;這時我們就可以依舊直接&lt;code class=&quot;language-text&quot;&gt;ssh&lt;/code&gt;服務器上的對應端口，就可以直接連線到GPU算力集羣上面了&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;**&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;my_mac&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token variable&quot;&gt;$*&lt;/span&gt;* &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; -p &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;port_on_server&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;lab_pc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;@&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;cloud_server_ip&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;恭喜您。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Catalyst：基於PyTorch的深度學習研發催化劑]]></title><description><![CDATA[翻译了一篇Scitator的博客。他是Catalyst团队Lead，开发了Catalyst这个基于PyTorch的深度学习研发框架。这篇文章简单介绍了这个框架的一些概念和思路。个人认为十分容易上手。]]></description><link>https://lumen.netlify.com/posts/61941d3c-0be0-4cc2-9e9c-fa0d784d8a29</link><guid isPermaLink="false">https://lumen.netlify.com/posts/61941d3c-0be0-4cc2-9e9c-fa0d784d8a29</guid><pubDate>Sun, 30 May 2021 09:12:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;譯者按&lt;/strong&gt;&lt;/p&gt;
+launchctl list &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$SERVICE_NAME&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Catalyst：基於PyTorch的深度學習研發催化劑]]></title><description><![CDATA[翻译了一篇Scitator的博客。他是Catalyst团队Lead，开发了Catalyst这个基于PyTorch的深度学习研发框架。这篇文章简单介绍了这个框架的一些概念和思路。个人认为十分容易上手。]]></description><link>https://lumen.netlify.com/posts/61941d3c-0be0-4cc2-9e9c-fa0d784d8a29</link><guid isPermaLink="false">https://lumen.netlify.com/posts/61941d3c-0be0-4cc2-9e9c-fa0d784d8a29</guid><pubDate>Sun, 30 May 2021 09:12:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;譯者按&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我平時在訓練神經網絡的時候，幾乎每次都要重新寫很多內容。倒也不是不能在之前的腳本上面改，主要是覺得改起來不如寫起來方便，況且不同的實驗也或多或少有不一樣的地方；就算改，每次或多或少都會遇到些問題，例如在某個不知名的角落裏寫死了一個變量。
 一直都有個想寫個兼容各種實驗的代碼庫的想法，但是後來發現工作量不小，遂作罷。最近在網絡上發現了Catalyst這個庫，簡單看了下內容，發現與我之前的代碼庫思路比較一致，很多地方幫助我們造好了不錯的輪子。現在把前一段時間這個項目作者Lead寫在medium上面的一篇博客翻譯給大家，希望能幫助到有需要的人。&lt;/p&gt;
 &lt;!--TOC--&gt;
